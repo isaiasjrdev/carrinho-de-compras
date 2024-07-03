@@ -1,6 +1,5 @@
 let totalGeral = 0
-document.querySelector('#lista-produtos').innerHTML = '';
-document.querySelector('#valor-total').textContent = 'R$ 0';
+limpar();
 
 function adicionar() {
    // recuperar os valores do produto, quantidade e valor
@@ -25,5 +24,7 @@ function adicionar() {
 }
 
 function limpar() {
-
+   totalGeral = 0
+   document.querySelector('#lista-produtos').innerHTML = '';
+   document.querySelector('#valor-total').textContent = 'R$ 0';
 }
