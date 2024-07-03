@@ -19,8 +19,9 @@ function adicionar() {
    `
    // atualizar o valor total da compra
    totalGeral = totalGeral + preco;
-   let campoTotal = document.querySelector('#valor-total')
-   campoTotal.textContent = `R$ ${totalGeral}`
+   let campoTotal = document.querySelector('#valor-total');
+   campoTotal.textContent = `R$ ${totalGeral}`;
+   document.querySelector('#quantidade').value = 0;
 }
 
 function limpar() {
