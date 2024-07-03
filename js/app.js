@@ -1,3 +1,7 @@
+let totalGeral = 0
+document.querySelector('#lista-produtos').innerHTML = '';
+document.querySelector('#valor-total').textContent = 'R$ 0';
+
 function adicionar() {
    // recuperar os valores do produto, quantidade e valor
    let produto = document.querySelector('#produto').value;
@@ -13,9 +17,10 @@ function adicionar() {
           <span class="texto-azul">${quantidade}x</span> ${nomeProduto} <span class="texto-azul">R$${preco}</span>
         </section>
    `
-
    // atualizar o valor total da compra
-
+   totalGeral = totalGeral + preco;
+   let campoTotal = document.querySelector('#valor-total')
+   campoTotal.textContent = `R$ ${totalGeral}`
 }
 
 function limpar() {
